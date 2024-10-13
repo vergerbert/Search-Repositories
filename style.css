@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #e1dfe0, white);
+}
+
+.search-input, .close-button {
+  outline: none;
+  border: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 350px;
+  height: 800px;
+  margin: 50px auto;
+  
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 0px rgba(34, 60, 80, 1);
+  background: white;
+}
+
+.search-form {
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.search-input {
+  width: 100%;
+  height: 60px;
+
+  box-sizing: border-box;
+  padding-left: 15px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 33px;
+
+  outline: none;
+  border: none;
+}
+
+.search-dropdown {
+  position: absolute;
+  width: 350px;
+
+  top: 112px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.dropdown-list {
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+  box-shadow: 0px 2px 4px 0px rgba(34, 60, 80, 0.8);
+  background-color: white;
+}
+
+.dropdown-item {
+  padding: 5px 5px;
+  transition: background-color 0.3 ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.repository-list {
+  width: 350px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.repository-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  border-bottom: 1px solid #e1dfe0;
+}
+
+.item {
+  font-size: 18px;
+  overflow: auto;
+}
+
+.item-text {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-text:first-child {
+  color: red;
+  font-weight: bold;
+}
+
+.close-button {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 2px;
+  background: black;
+  transform-origin: center;
+}
+
+.close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
