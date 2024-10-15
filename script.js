@@ -50,15 +50,12 @@ let repositories;
 
 /* Выпадающий список репозиториев */
 
-function debounce(fn, ms) {
+const debounce = (fn, ms) => {
   let timeout;
 
-  return function(...args) {
+  return function () {
     clearTimeout(timeout);
-
-    timeout = setTimeout(() => {
-      fn.apply(this, args);
-    }, ms)
+    timeout = setTimeout(() => fn.apply(this, arguments), ms);
   }
 }
 
